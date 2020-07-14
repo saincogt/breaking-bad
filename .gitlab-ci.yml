@@ -1,0 +1,24 @@
+image: node:12.13.1
+variables:
+  PUBLIC_URL: /breaking-bad
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build --prod
+    - cp public/index.html public/404.html
+    - mv public _public
+    - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
