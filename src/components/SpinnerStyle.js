@@ -10,9 +10,9 @@ const SpinnerOverlay = styled.div`
 
 const SpinnerContainer = styled.div`
 	display: inline-block;
-	width: 50px;
-	height: 50px;
-	border: 3px solid rgba(60, 60, 60, 0.6);
+	width: 80px;
+	height: 80px;
+	border: 8px solid rgba(60, 60, 60, 0.6);
 	border-radius: 50%;
 	border-top-color: #9c9898;
 	animation: spin 1s ease-in-out infinite;
